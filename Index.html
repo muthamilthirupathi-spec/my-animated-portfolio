@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muthamil T. | My Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+    line-height: 1.7;
+}
+
+header {
+    background: #11182d;
+    padding: 18px 12px;
+    text-align: center;
+    border-bottom: 2px solid #a855f7;
+}
+
+header h2 {
+    color: #c084fc;
+    margin-bottom: 12px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav button {
+    background: #222c47;
+    color: white;
+    border: 1px solid #a855f7;
+    padding: 9px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover,
+nav button.active {
+    background: #a855f7;
+    transform: translateY(-3px);
+}
+
+main {
+    max-width: 950px;
+    margin: auto;
+    padding: 25px 16px;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.avatar {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    margin: 10px auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #a855f7, #14b8a6);
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 30px #a855f7;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(4deg);
+    }
+}
+
+h1 {
+    font-size: 34px;
+    color: #c084fc;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #c084fc;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #5eead4;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 12px;
+    color: #e2e8f0;
+}
+
+.highlight {
+    color: #5eead4;
+    font-weight: bold;
+}
+
+.card {
+    background: #151e35;
+    border: 1px solid #34415f;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #c084fc;
+    box-shadow: 0 8px 25px #00000044;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #293453;
+    color: #5eead4;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin: 5px 4px 5px 0;
+}
+
+.big-button {
+    background: linear-gradient(90deg, #9333ea, #0d9488);
+    border: none;
+    padding: 12px 22px;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #a5b4fc;
+    border-top: 1px solid #34415f;
+    margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>💜 Muthamil's Portfolio</h2>
+
+    <nav>
+        <button class="active" onclick="showPage('home', this)">Home</button>
+        <button onclick="showPage('about', this)">About Me</button>
+        <button onclick="showPage('education', this)">Education</button>
+        <button onclick="showPage('skills', this)">Skills</button>
+        <button onclick="showPage('family', this)">Family</button>
+        <button onclick="showPage('goals', this)">Goals</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+        <div class="hero">
+
+            <div class="avatar">MT</div>
+
+            <h1>Hi, I'm Muthamil T. 👋</h1>
+
+            <h3>Engineering Student | Future Software Engineer</h3>
+
+            <p>
+                Welcome to my personal portfolio!
+                This website shares my education, interests,
+                skills, family, and dreams.
+            </p>
+
+            <button class="big-button"
+                onclick="showPage('about', document.querySelectorAll('nav button')[1])">
+                Explore My World ✨
+            </button>
+
+        </div>
+
+        <div class="card">
+            <h2>🌟 My Journey</h2>
+            <p>
+                I am a Computer Science and Engineering student
+                who loves learning new things and exploring technology.
+                I want to improve my knowledge, communication skills,
+                and confidence step by step.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page">
+        <h1>About Me 💜</h1>
+
+        <div class="card">
+            <h3>Who Am I?</h3>
+            <p>
+                Hello! My name is <span class="highlight">Muthamil T.</span>
+                I am an engineering student with an interest in
+                technology, creativity, and learning.
+            </p>
+            <p>
+                I believe that every day is a new opportunity
+                to learn something useful and become a better person.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✨ My Interests</h3>
+            <span class="tag">Dancing 💃</span>
+            <span class="tag">Movies 🎬</span>
+            <span class="tag">K-Dramas 🇰🇷</span>
+            <span class="tag">Technology 💻</span>
+            <span class="tag">Learning New Things 📚</span>
+        </div>
+
+        <div class="card">
+            <h3>💎 My Strengths</h3>
+            <p>• Eager to learn new things</p>
+            <p>• Willing to improve myself</p>
+            <p>• Interested in solving problems</p>
+            <p>• Working to build my confidence</p>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION PAGE -->
+    <section id="education" class="page">
+        <h1>My Education 🎓</h1>
+
+        <div class="card">
+            <h3>🏫 School Education</h3>
+            <p><b>School:</b> Government Higher Secondary School</p>
+            <p><b>Location:</b> Aravellore</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>📘 10th Standard</h3>
+                <p>Marks Obtained</p>
+                <h1>470</h1>
+            </div>
+
+            <div class="card">
+                <h3>📗 12th Standard</h3>
+                <p>Marks Obtained</p>
+                <h1>533</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🎓 College Education</h3>
+            <p><b>College:</b> M. Kumarasamy College</p>
+            <p><b>Department:</b> Computer Science and Engineering (CSE)</p>
+            <p><b>Current Level:</b> Engineering Student</p>
+        </div>
+    </section>
+
+
+    <!-- SKILLS PAGE -->
+    <section id="skills" class="page">
+        <h1>My Skills 💻</h1>
+
+        <div class="card">
+            <h3>🌱 Currently Learning</h3>
+            <p>HTML — Creating web pages</p>
+            <p>CSS — Designing websites</p>
+            <p>C Programming — Learning programming fundamentals</p>
+            <p>GitHub — Managing website projects</p>
+        </div>
+
+        <div class="card">
+            <h3>🗣️ Personal Development</h3>
+            <p>Communication skills</p>
+            <p>English speaking practice</p>
+            <p>Creative thinking</p>
+            <p>Problem-solving skills</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 My Learning Mindset</h3>
+            <p>
+                I am at the beginning of my technology journey.
+                I want to practise regularly, gain experience,
+                and develop my skills step by step.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FAMILY PAGE -->
+    <section id="family" class="page">
+        <h1>My Family ❤️</h1>
+
+        <div class="card">
+            <h3>👨 My Father</h3>
+            <p><b>Name:</b> Thirupathi</p>
+            <p><b>Occupation:</b> Farmer</p>
+            <p>
+                My father works hard for our family.
+                I respect his hard work and dedication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>👩 My Mother</h3>
+            <p><b>Name:</b> Velammal</p>
+            <p><b>Occupation:</b> Homemaker</p>
+            <p>
+                My mother is an important part of my life.
+                Her love and support mean a lot to me.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏡 My Family, My Strength</h3>
+            <p>
+                My family inspires me to work hard,
+                continue my education, and follow my dreams.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- GOALS PAGE -->
+    <section id="goals" class="page">
+        <h1>My Dreams & Goals 🚀</h1>
+
+        <div class="card">
+            <h3>💻 My Career Goal</h3>
+            <p>
+                My dream is to become a successful software engineer.
+                I want to improve my programming knowledge
+                and build useful technology projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 My Business Dream</h3>
+            <p>
+                I also dream of starting my own business in the future.
+                I want to explore new ideas and create opportunities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌈 My Future Plans</h3>
+            <p>• Improve my English communication skills</p>
+            <p>• Learn programming step by step</p>
+            <p>• Create more websites and projects</p>
+            <p>• Gain knowledge and practical experience</p>
+            <p>• Work towards my career and business goals</p>
+        </div>
+
+        <div class="card">
+            <h2>✨ My Motto</h2>
+            <p>
+                "Believe in yourself, keep learning,
+                and never stop growing."
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Made with 💜 by Muthamil T.</p>
+    <p>My Portfolio | Learning Today, Growing Tomorrow ✨</p>
+</footer>
+
+<script>
+function showPage(pageId, button) {
+
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.remove('active');
+    });
+
+    document.getElementById(pageId).classList.add('active');
+
+    document.querySelectorAll('nav button').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    if (button) {
+        button.classList.add('active');
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+  </html>
